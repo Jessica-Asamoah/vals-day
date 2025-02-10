@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Be My Valentine?</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Will you be my Valentine? ❤️</h1>
+      <div class="buttons">
+        <button class="yes" onclick="window.location.href='yay.html'">
+          Yes
+        </button>
+        <button class="no" onmouseover="moveNo()">No</button>
+      </div>
+    </div>
+    <script>
+      function moveNo() {
+        const noButton = document.querySelector(".no");
+        const x = Math.random() * (window.innerWidth - 100);
+        const y = Math.random() * (window.innerHeight - 100);
+        noButton.style.left = `${x}px`;
+        noButton.style.top = `${y}px`;
+      }
+    </script>
+  </body>
+</html>
